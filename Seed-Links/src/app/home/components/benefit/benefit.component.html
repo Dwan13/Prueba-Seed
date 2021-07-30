@@ -1,0 +1,11 @@
+<mat-card class="col-xs-12 col-md-4">
+    <div class="crop-image">
+        <img [src]="benefit.image" alt="">
+    </div>
+    <mat-card-header>
+        <mat-card-title class="title">{{benefit.title | uppercase}}</mat-card-title>
+    </mat-card-header>    
+    <mat-card-content>
+        <p>{{benefit.description}}</p>
+    </mat-card-content>
+</mat-card>

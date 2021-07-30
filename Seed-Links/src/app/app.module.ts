@@ -9,6 +9,7 @@ import { PageNotFountComponent } from './page-not-fount/page-not-fount.component
 import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CoreModule } from './core/core.module';
     BrowserAnimationsModule,
     SharedModule,
     FormsModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

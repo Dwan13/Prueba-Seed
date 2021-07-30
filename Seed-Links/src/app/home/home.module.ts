@@ -6,16 +6,26 @@ import { HomeComponent } from './components/home/home.component';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../material/material.module';
+import { BoostComponent } from './components/boost/boost.component';
+import { AdvancedComponent } from './components/advanced/advanced.component';
+import { BenefitComponent } from './components/benefit/benefit.component';
+import { CartsComponent } from './components/carts/carts.component';
 
 @NgModule({
     declarations:[
         BannerComponent,
-        HomeComponent        
+        HomeComponent,
+        BoostComponent,
+        AdvancedComponent,
+        BenefitComponent,
+        CartsComponent,
     ],
     imports: [
         CommonModule,
         HomeRoutingModule,
-        SharedModule
+        SharedModule,
+        MaterialModule
     ]
 })
 export class HomeModule{

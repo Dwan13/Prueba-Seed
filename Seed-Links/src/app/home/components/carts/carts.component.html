@@ -1,0 +1,15 @@
+ <!-- [formGroup]="form" (ngSubmit)="createProduct($event)" -->
+ <form>
+    <!-- Id -->
+    <div class="refForm">
+        <mat-form-field appearance="outline" class="id">
+            <input matInput type="email" matInput [formControl]="emailFormControl" placeholder="Shorten a link here...">
+              
+        </mat-form-field>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+        </mat-error>
+    </div>
+    <button mat-raised-button type="submit">Shorten It!</button>
+</form>
+<button mat-raised-button (click)="crearteUrl()">Shorten It!</button>

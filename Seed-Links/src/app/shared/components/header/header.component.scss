@@ -1,0 +1,21 @@
+@import './../../../../styles/variables.scss';
+.header{
+    background-color: white;
+    &--row{
+        padding: 0;
+        &__div{
+            width: 100%;
+            padding: 0 150px;
+            @media (max-width: 576px) {
+                padding: 0;
+            }
+            .content{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+        }
+    }
+    
+}
+

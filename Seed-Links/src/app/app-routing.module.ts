@@ -16,7 +16,21 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-        //component:HomeComponent
+      }
+      ,
+      {
+        path: 'features',
+        loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)
+      }
+      ,
+      {
+        path: 'pricing',
+        loadChildren: () => import('./pricing/pricing.module').then(m => m.PricingModule)
+      }
+      ,
+      {
+        path: 'resources',
+        loadChildren: () => import('./resources/resources.module').then(m => m.ResourcesModule)
       }
     ]
   },   

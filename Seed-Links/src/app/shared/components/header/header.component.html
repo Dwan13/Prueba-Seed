@@ -1,1 +1,27 @@
-<p>header works!</p>
+<mat-toolbar class="header">
+    <mat-toolbar-row class="header--row">
+        <div class="row between-xs middle-xs header--row__div">
+            <div class="content">
+                <a href="/home" class="logo">
+                    <img src="../../../../assets/images/logo.svg" alt="Logo">
+                </a>    
+                <nav>
+                    <a routerLink="/features" routerLinkActive="active">Features</a>
+                    <a routerLink="/pricing" routerLinkActive="active">Pricing</a>
+                    <a routerLink="/resources" routerLinkActive="active">Resources</a>
+                </nav>
+            </div>
+            <div class="autentication">
+                <a routerLink="/home" routerLinkActive="active">Login</a>
+                <button mat-raised-button>Sign Up</button>
+            </div>
+            <!-- <a mat-button [matMenuTriggerFor]="menu"><span class="material-icons">
+                    menu
+                </span></a>
+            <mat-menu #menu="matMenu" class="navbar">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu> -->
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

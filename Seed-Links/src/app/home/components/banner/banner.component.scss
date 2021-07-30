@@ -1,0 +1,34 @@
+@import './../../../../styles/variables.scss';
+.banner{
+    overflow: hidden;
+    padding-bottom: 150px;
+    &--text{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        padding-left: 150px;
+        h1{
+            font-size: 60px;
+            line-height: normal;
+        }
+        p{
+            color: $Gray;
+            width: 100%;
+            font-size: 30px;
+            line-height: normal;
+        }
+        button{
+            margin: 0;
+        }
+        @media (max-width: 576px) {
+            justify-content: center;
+        }
+    }
+    &--img{
+        picture{           
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}

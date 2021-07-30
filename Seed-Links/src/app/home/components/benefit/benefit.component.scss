@@ -1,0 +1,31 @@
+@import './../../../../styles/variables.scss';
+
+mat-card{
+    position: relative;
+    padding-top: 50px;
+    z-index: 100;
+    text-align: left;
+    max-width: 100%;
+    p{
+        color: $Gray;
+        font-size: 16px;
+        line-height: normal;
+    }
+    .crop-image{
+        position: absolute;
+        transform: translate(0%, -130%);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        background-color:$DarkViolet;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        img{
+            width: 70%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}

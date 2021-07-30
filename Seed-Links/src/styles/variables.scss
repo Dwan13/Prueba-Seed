@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
+
+
+$color-black-init:rgba(0,0,0,.7);
+$color-black: #101010;
+/* COLORS
+### Primary ###
+*/
+$Cyan: hsl(180, 66%, 49%);
+$DarkViolet: hsl(257, 27%, 26%);
+/* ### Secondary */
+$Red: hsl(0, 87%, 67%);
+
+/* ### Neutral*/
+$Gray: hsl(0, 0%, 75%);
+$GrayishViolet: hsl(257, 7%, 63%);
+$VeryDarkBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
+$GrayV2: #f0f1f6;
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $Cyan,
+   accent: $DarkViolet,
+   warn: $Red,
+ )
+));
+
+
+button{
+    padding: 0 20px;
+    margin: 0 10px;            
+    background-color: $Cyan;
+    border-radius: 20px;
+        &:hover{
+          filter:brightness(1.5);
+        }            
+}
+
+.row{
+  margin: 0;
+}
+.mat-card-header-text{
+  margin: 0 !important;
+}
+.mat-form-field-wrapper{
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: white;
+  border-radius: 5px;
+}
