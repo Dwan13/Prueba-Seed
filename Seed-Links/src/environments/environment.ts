@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url_api:'https://api.shrtco.de/v2/shorten?url='
+  url_api:'https://api.shrtco.de/v2/shorten?url='  
 };
 
 /*
