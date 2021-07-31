@@ -46,7 +46,7 @@ export class AdvancedComponent implements OnInit {
     if(this.urlFormControl.valid){
       this.benefitsService.createUrl(this.urlFormControl.value)
       .subscribe(url => {
-        if(url=== null){
+        if(url == null){
           alert('Url no valida');
         }else{
           this.urlS = url;        
