@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { BenefitsService } from 'src/app/core/services/benefits/benefits.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Urls } from 'src/app/core/models/urls/urls.model';
@@ -16,7 +16,7 @@ export class AdvancedComponent implements OnInit {
   benefits;
   toggle = true;
   status = 'Copy'; 
-  data;
+  data=[];
   urlFormControl:FormGroup
 
   constructor(
@@ -31,7 +31,9 @@ export class AdvancedComponent implements OnInit {
   ngOnInit(): void {
     this.benefits = this.benefitsService.getAllBenefits();
     this.data = JSON.parse(localStorage.getItem('Links'));
-    this.listUrl=this.data
+    if(this.data != null){
+      this.listUrl=this.data
+    }
   }
   private buildForm(){
     this.urlFormControl= this.formBuilder.group({
@@ -62,5 +64,5 @@ export class AdvancedComponent implements OnInit {
     this.status='Copied!';
     this.toggle = false;
   }
- 
+  
 }
