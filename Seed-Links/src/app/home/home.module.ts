@@ -10,7 +10,6 @@ import { MaterialModule } from '../material/material.module';
 import { BoostComponent } from './components/boost/boost.component';
 import { AdvancedComponent } from './components/advanced/advanced.component';
 import { BenefitComponent } from './components/benefit/benefit.component';
-import { CartsComponent } from './components/carts/carts.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
         BoostComponent,
         AdvancedComponent,
         BenefitComponent,
-        CartsComponent,
     ],
     imports: [
         CommonModule,

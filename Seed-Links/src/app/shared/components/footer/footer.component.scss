@@ -6,7 +6,7 @@ footer {
         padding: 50px 150px;
         background-color:$VeryDarkViolet;
         width: auto;
-        @media (max-width: 576px) {
+        @media (max-width: 1200px) {
           padding: 50px 20px;
           flex-wrap: nowrap;
         }
@@ -14,7 +14,7 @@ footer {
         .row{
             display: flex;
             justify-content: space-between;
-            @media (max-width: 576px) {
+            @media (max-width: 1200px) {
               justify-content: center;
               text-align: center;
             }
@@ -22,7 +22,7 @@ footer {
         .box {            
           h3 {
             color: white;
-            @media (max-width: 576px) {
+            @media (max-width: 1200px) {
               margin: 20px 0;
             }
           }
@@ -49,21 +49,24 @@ footer {
           }
           .logo img{
               filter: invert(1);
-              @media (max-width: 576px) {
+              @media (max-width: 1200px) {
                 margin: 20px 0;
               }
           }
           &.items{
                display: flex; 
                justify-content: space-between;
-               @media (max-width: 576px) {
+               @media (max-width: 1200px) {
                 display: inline-block;
                 text-align: center;
+              }
+              h3,a{
+                font-size: 12px;
               }
             }
           .redes{
               text-align: right;
-              @media (max-width: 576px) {
+              @media (max-width: 1200px) {
                 text-align: center;
                 margin: 20px 0;
               }

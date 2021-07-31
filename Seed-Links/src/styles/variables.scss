@@ -42,6 +42,14 @@ h1{
   font-family: $poppins-bold !important; 
   color: $VeryDarkViolet;
 }
+h2{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+  @media (max-width: 1200px) {
+    font-size: 25px;
+}  
+}
 h2,.mat-card{
   color: $VeryDarkViolet;
   font-family: $poppins-Medium !important; 
@@ -70,7 +78,13 @@ button{
     border-radius: 20px;
         &:hover{
           filter:brightness(1.5);
-        }            
+        }   
+        &.green{
+          background-color: $Cyan;
+      }
+      &.purple{
+          background-color: $DarkViolet;
+      }         
 }
 
 .row{

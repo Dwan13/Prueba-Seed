@@ -6,9 +6,7 @@
                 <img src="../../../../assets/images/bg-shorten-desktop.svg" alt="shorten">
             </picture>
             <div class="shorten--form">
-                <!-- [formGroup]="form" (ngSubmit)="createProduct($event)" -->
                 <form [formGroup]="urlFormControl" (ngSubmit)="crearteUrl($event)">
-                    <!-- Id -->
                     <div class="refForm">
                         <mat-form-field appearance="outline" class="id">
                             <input matInput type="url" matInput formControlName="url" placeholder="Shorten a link here...">

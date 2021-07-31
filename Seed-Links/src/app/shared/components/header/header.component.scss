@@ -8,7 +8,7 @@
         &__div{
             width: 100%;
             padding: 0 150px;
-            @media (max-width: 576px) {
+            @media (max-width: 1200px) {
                 padding: 0 20px;
             }
             .content{
@@ -21,14 +21,14 @@
                 }
                 nav{
                     display: flex;
-                    @media (max-width: 576px) {
+                    @media (max-width: 1200px) {
                         display: none;
                     }
                 }
             }
             .autentication{
                 display: block;
-                    @media (max-width: 576px) {
+                    @media (max-width: 1200px) {
                         display: none;
                     }
             }
@@ -36,7 +36,7 @@
     }
     .hamburguer{
         display: none;
-        @media (max-width: 576px) {
+        @media (max-width: 1200px) {
             display: block;
         }
     }
