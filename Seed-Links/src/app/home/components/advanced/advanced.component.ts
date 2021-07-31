@@ -50,8 +50,7 @@ export class AdvancedComponent implements OnInit {
           alert('Url no valida');
         }else{
           this.urlS = url;        
-          this.listUrl.push(url); 
-                  
+          this.listUrl.push(url);                  
         }
         localStorage.setItem('Links',JSON.stringify(this.listUrl));
         
