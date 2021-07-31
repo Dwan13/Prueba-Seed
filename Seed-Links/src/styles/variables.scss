@@ -19,6 +19,41 @@ $VeryDarkBlue: hsl(255, 11%, 22%);
 $VeryDarkViolet: hsl(260, 8%, 14%);
 $GrayV2: #f0f1f6;
 
+
+/* Fonts */
+@font-face {
+  font-family: 'poppins-bold';
+  src: url('../assets/fonts/Poppins-Bold.ttf');
+}
+@font-face {
+  font-family: 'poppins-Medium';
+  src: url('../assets/fonts/Poppins-Medium.ttf');
+}
+@font-face {
+  font-family: 'poppins-Light';
+  src: url('../assets/fonts/Poppins-Light.ttf');
+}
+
+$poppins-bold:'poppins-bold';
+$poppins-Medium:'poppins-Medium';
+$poppins-Light:'poppins-Light';
+
+h1{
+  font-family: $poppins-bold !important; 
+  color: $VeryDarkViolet;
+}
+h2,.mat-card{
+  color: $VeryDarkViolet;
+  font-family: $poppins-Medium !important; 
+}
+h3,p,a,button span{
+  font-size: 18px;
+   font-family: $poppins-Light !important;
+}
+p{
+  color: $GrayishViolet;
+}
+
 $my-theme: mat.define-light-theme((
  color: (
    primary: $Cyan,
@@ -29,7 +64,7 @@ $my-theme: mat.define-light-theme((
 
 
 button{
-    padding: 0 20px;
+    padding: 5px 20px;
     margin: 0 10px;            
     background-color: $Cyan;
     border-radius: 20px;

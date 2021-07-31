@@ -3,6 +3,7 @@ import { Benefit } from '../../models/benefit.model';
 import { Cart } from '../../models/cart/cart.model';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { Urls } from '../../models/urls/urls.model';
 
 @Injectable({
   providedIn: 'root'
@@ -34,8 +35,7 @@ export class BenefitsService {
   ) { }
   
   createUrl(url: Cart){
-    console.log(`${environment.url_api}${url.url}`)
-    return this.http.get(`${environment.url_api}${url.url}`)
+    return this.http.get<Urls>(`${environment.url_api}${url.url}`)
   }
   getAllBenefits(){
     return this.benefits

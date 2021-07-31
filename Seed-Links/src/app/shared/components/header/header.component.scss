@@ -1,21 +1,70 @@
 @import './../../../../styles/variables.scss';
 .header{
     background-color: white;
+    margin-top: 10px;
+    position: relative;
     &--row{
         padding: 0;
         &__div{
             width: 100%;
             padding: 0 150px;
             @media (max-width: 576px) {
-                padding: 0;
+                padding: 0 20px;
             }
             .content{
                 display: flex;
                 justify-content: center;
                 align-content: center;
+                a{
+                    display: flex;
+                    align-items: center;
+                }
+                nav{
+                    display: flex;
+                    @media (max-width: 576px) {
+                        display: none;
+                    }
+                }
+            }
+            .autentication{
+                display: block;
+                    @media (max-width: 576px) {
+                        display: none;
+                    }
             }
         }
     }
-    
+    .hamburguer{
+        display: none;
+        @media (max-width: 576px) {
+            display: block;
+        }
+    }
+    &--responsive{
+        position: absolute;
+        width: -webkit-fill-available;
+        background-color: $DarkViolet;
+        padding: 20px;
+        border-radius: 20px;
+        top: 100%;
+        display: grid;
+        z-index: 100;
+        nav{
+            border-bottom: 1px solid $GrayishViolet;
+        }
+        .autentication,nav{
+            display: grid;
+            text-align: center;
+            a{
+                color: white;
+                font-weight: 600;
+                padding: 20px;
+            }
+            button{
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 

@@ -3,110 +3,198 @@
     text-align: center;
     width: 100%;
     background-color:$GrayV2;
-    padding: 50px 0;
-    .shorten{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        padding: 0px 150px;
-        position: relative;    
-        transform: translate(0, -75%);
-
-        @media (max-width: 576px) {
-            padding: 0px;
-        }
-        picture{
-            background-color:$VeryDarkViolet;
-            height: auto;
-            width: -webkit-fill-available;
-            font-size: 0;
-            line-height: 0;
-            border-radius: 20px;
-            img{
-                float: initial;
-                width: 100%;
-                display: block;
-                border-radius: 20px;
-            }
-        } 
-        &--form{
-            width: 100%;
-            position: absolute;
+    padding: 0 0 50px;
+    &--operations{
+        transform: translate(0, -90px);
+        .shorten{
             display: flex;
             justify-content: center;
             align-content: center;
-            flex-wrap: wrap;
             align-items: center;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            
-            .mat-form-field{
-                margin: 0;
-                width: 100%;
-                @media (max-width: 576px) {
-                    width: auto;
-                }
+            padding: 0px 150px;
+            position: relative;
+            @media (max-width: 576px) {
+                padding: 0px 20px;
             }
-            form{
-                display:flex;
+            picture{
+                background-color:$VeryDarkViolet;
+                height: auto;
+                width: -webkit-fill-available;
+                font-size: 0;
+                line-height: 0;
+                border-radius: 20px;
+                img{
+                    float: initial;
+                    width: 100%;
+                    display: block;
+                    border-radius: 20px;
+                }
+            } 
+            &--form{
+                width: 100%;
+                position: absolute;
+                display: flex;
                 justify-content: center;
                 align-content: center;
-                align-items: flex-start;
-                width: 100%;
-                @media (max-width: 576px) {
-                    display: grid;
-                    flex-wrap: nowrap;
-                }
-                .mat-error{
-                    color: $Red;
-                    text-align: left;
-                }
-                .refForm{
-                    width: 60%;
-                }
-                button{
-                    border-radius: 10px;
-                    min-height: 50px;
+                flex-wrap: wrap;
+                align-items: center;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                
+                .mat-form-field{
+                    margin: 0;
+                    width: 100%;
                     @media (max-width: 576px) {
-                        margin: 0;
+                        width: auto;
+                    }
+                }
+                form{
+                    display:flex;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: flex-start;
+                    width: 100%;
+                    @media (max-width: 576px) {
+                        display: inline-flex;
+                        flex-wrap: wrap;
+                        padding: 0 40px;
+                    }
+                    .mat-error{
+                        color: $Red;
+                        text-align: left;
+                    }
+                    .refForm{
+                        width: 60%;
+                        @media (max-width: 576px) {
+                            width: 100%;
+                            margin-bottom: 10px;
+                            mat-form-field{
+                                width: inherit !important;
+                            }
+                        }
+                    }
+                    button{
+                        border-radius: 10px;
+                        min-height: 50px;
+                        &:disabled{
+                            background-color: $Cyan;
+                            opacity: 0.7;
+                        }
+                        @media (max-width: 576px) {
+                            margin: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .containerLinks{
+            padding: 20px 150px 0px;
+            @media (max-width: 576px) {
+                padding: 20px 20px 0px;
+            }
+                &--body{
+                    background-color: white;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    @media (max-width: 576px) {
+                        display: grid;
+                        justify-content: center;
+                        text-align: left;
+                        a{
+                            font-size: 10px;
+                            padding: 5px 0;
+                            border-bottom: 1px solid $DarkViolet;
+                        }
+                    }
+                &__copys{
+                    @media (max-width: 576px) {
+                        display: grid;
+                    }
+                    a{
+                        color: $Cyan;
+                        @media (max-width: 576px) {
+                            font-size: 10px;
+                            padding: 5px 0;
+                            border: none;
+                        }
+                    }
+                    button{
+                        @media (max-width: 576px) {
+                            margin: 0;
+                        }
+                        border-radius: 10px;
+                        &.green{
+                            background-color: $Cyan;
+                        }
+                        &.purple{
+                            background-color: $DarkViolet;
+                        }
                     }
                 }
             }
         }
     }
+    
+    .info{
+        padding: 0  0px 130px;
+        h2{
+            font-size: 30px;
+            font-weight: 700;
+        }
+        p{
+            padding: 0 30%;
+            line-height: normal;
+            @media (max-width: 576px) {
+                padding: 0 10%;
+            }
+        }
+    }
     .row{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         height: 250px;
+        width: 100%;
+        padding: 0 150px;
+        @media (max-width: 576px) {
+            height: auto;
+            padding: 0 20px;
+
+        }
         app-benefit{
             align-self: center;
             max-width: 300px;
             margin: 10px;
             position: relative;
+            @media (max-width: 576px) {
+                max-width: 370px;    
+            }
             &::before{
               content: "";
               z-index: 0;  
-              width: 100px;
+              width: 300%;
               height: 8px;
               background-color: $Cyan;
               position: absolute;
-              left: -20%;
+              left: -100%;
               top: 45%;
-            }
-            &::after{
-              content: "";
-              z-index: 0;      
-              width: 100px;
-              height: 8px;
-              background-color: $Cyan;
-              position: absolute;
-             right: -20%;
-             top: 45%;
-            }
+               @media (max-width: 576px) {
+                    width: 8px;
+                    height: 400px;
+                    top: -50%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: 0 auto;
+               }
+            }            
             &:first-child{
                 align-self: flex-start;
                 &::before,

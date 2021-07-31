@@ -1,31 +1,41 @@
 <section class="content">
-    <div class="shorten">
-        <picture>
-            <source media="(max-width:1200px)" srcset="../../../../assets/images/bg-shorten-mobile.svg" alt="shorten">
-            <img src="../../../../assets/images/bg-shorten-desktop.svg" alt="shorten">
-        </picture>
-        <div class="shorten--form">
-            <!-- [formGroup]="form" (ngSubmit)="createProduct($event)" -->
-            <form>
-                <!-- Id -->
-                <div class="refForm">
-                    <mat-form-field appearance="outline" class="id">
-                        <input matInput type="email" matInput [formControl]="emailFormControl"
-                            placeholder="Shorten a link here...">
-
-                    </mat-form-field>
-                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                        Please enter a valid email address
-                    </mat-error>
+    <div class="content--operations">
+        <div class="shorten">
+            <picture>
+                <source media="(max-width:1200px)" srcset="../../../../assets/images/bg-shorten-mobile.svg" alt="shorten">
+                <img src="../../../../assets/images/bg-shorten-desktop.svg" alt="shorten">
+            </picture>
+            <div class="shorten--form">
+                <!-- [formGroup]="form" (ngSubmit)="createProduct($event)" -->
+                <form [formGroup]="urlFormControl" (ngSubmit)="crearteUrl($event)">
+                    <!-- Id -->
+                    <div class="refForm">
+                        <mat-form-field appearance="outline" class="id">
+                            <input matInput type="url" matInput formControlName="url" placeholder="Shorten a link here...">
+                        </mat-form-field>
+                        <mat-error
+                            *ngIf="urlFormControl.get('url').hasError('isUrlValid') || urlFormControl.get('url').hasError('required') && urlFormControl.get('url').dirty">
+                            Please add a link
+                        </mat-error>
+                    </div>
+                    <button mat-raised-button type="submit" [disabled]="urlFormControl.invalid">Shorten It!</button>
+                </form>
+            </div>
+        </div>
+        <div *ngIf='listUrl' class="containerLinks">
+            <div *ngFor="let url of listUrl; index as i" class="containerLinks--body">
+                <a [href]="url.result.original_link">{{url.result.original_link}}</a>
+                <div class="containerLinks--body__copys">
+                    <a [href]="url.result.full_short_link">{{url.result.full_short_link}}</a>
+                    <button mat-raised-button (click)="copyLink(url.result.full_short_link)" [ngClass]="{'green' : toggle, 'purple': !toggle}">{{status}}</button>
                 </div>
-                <button mat-raised-button type="submit">Shorten It!</button>
-            </form>
-            <button mat-raised-button (click)="crearteUrl()">Shorten It!</button>
+            </div>
         </div>
     </div>
     <div class="info">
         <h2>Advanced Statistics</h2>
         <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+        
     </div>
     <div class="row">
         <app-benefit *ngFor="let benefit of benefits" [benefit]="benefit">

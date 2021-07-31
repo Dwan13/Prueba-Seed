@@ -11,6 +11,7 @@ import { BoostComponent } from './components/boost/boost.component';
 import { AdvancedComponent } from './components/advanced/advanced.component';
 import { BenefitComponent } from './components/benefit/benefit.component';
 import { CartsComponent } from './components/carts/carts.component';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @NgModule({
     declarations:[
@@ -25,7 +26,8 @@ import { CartsComponent } from './components/carts/carts.component';
         CommonModule,
         HomeRoutingModule,
         SharedModule,
-        MaterialModule
+        MaterialModule,
+        ClipboardModule
     ]
 })
 export class HomeModule{

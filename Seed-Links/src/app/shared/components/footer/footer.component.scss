@@ -6,15 +6,25 @@ footer {
         padding: 50px 150px;
         background-color:$VeryDarkViolet;
         width: auto;
-       
+        @media (max-width: 576px) {
+          padding: 50px 20px;
+          flex-wrap: nowrap;
+        }
         
         .row{
             display: flex;
             justify-content: space-between;
+            @media (max-width: 576px) {
+              justify-content: center;
+              text-align: center;
+            }
         
         .box {            
           h3 {
             color: white;
+            @media (max-width: 576px) {
+              margin: 20px 0;
+            }
           }
           input{
             color: white;
@@ -39,13 +49,24 @@ footer {
           }
           .logo img{
               filter: invert(1);
+              @media (max-width: 576px) {
+                margin: 20px 0;
+              }
           }
           &.items{
                display: flex; 
                justify-content: space-between;
+               @media (max-width: 576px) {
+                display: inline-block;
+                text-align: center;
+              }
             }
           .redes{
               text-align: right;
+              @media (max-width: 576px) {
+                text-align: center;
+                margin: 20px 0;
+              }
               a{
                   cursor: pointer;
                   svg {
